@@ -7,3 +7,12 @@ Git commands:
     Git checkout <branch name>
 4.To create new branch & checkout same branch
     Git checkout -b <branch name>
+5.Add a specified file to repo:
+    Git add <"filename">
+6.To View status of files 
+    Git Status
+7.To commit with message
+    Git Commit -m <"message">
+8.To push the current branch and set the remote as upstream
+    Git push --set-upstream origin <branch name>
+9.
