@@ -1,0 +1,9 @@
+Git commands:
+1.To view list of branches in a repo:
+    Git branch
+2.To create new branch 
+    Git branch <branch name>
+3.To checkout branch
+    Git checkout <branch name>
+4.To create new branch & checkout same branch
+    Git checkout -b <branch name>
