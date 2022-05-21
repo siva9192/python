@@ -7,6 +7,7 @@
 5.Replace
 6.Split
 7.Strip
+8.Bool
 """
 # 1.Format
 # it is used to concat diffrent type of data
@@ -47,3 +48,22 @@ print(Name.strip())
 Name = 'Python'
 print(Name.lstrip('P'))
 print(Name.rstrip('in'))
+
+# 8.Bool
+"""
+Bool() returns true  when it is NOT IN( '',0,[],(),{} )
+"""
+#True case
+print(bool("python"))
+print(bool(2))
+print(bool([1,2,3]))
+print(bool((1,2,3)))
+print(bool({1,2,3}))
+
+#False case
+print(bool())
+print(bool(0))
+print(bool([]))
+print(bool(()))
+print(bool({}))
+
