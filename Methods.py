@@ -24,6 +24,11 @@ List Methods:
 18.Extand
 19.Index    --only returns the first occurrence of the value.
 20.Insert   --inserts the specified value at the specified position.
+
+Tuple Methods
+21.Count
+22.Index
+
 """
 # 1.Format
 # it is used to concat diffrent type of data
@@ -165,3 +170,12 @@ Names.index(1)
 Names=['Tokyo','Berlin','Rio','Denver']
 Names.insert(2,Numbers)
 Names.copy()
+
+##Tuple Methods
+#20.count
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+print(thistuple.count(5))
+
+#21.index
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+print(thistuple.index(5))
