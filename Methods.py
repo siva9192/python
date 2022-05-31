@@ -29,6 +29,24 @@ Tuple Methods
 21.Count
 22.Index
 
+Set Methods
+23.Add()	                      Adds an element to the set
+24.Clear()	                    Removes all the elements from the set
+25.Copy()	                      Returns a copy of the set
+26.Difference()	                Returns a set containing the difference between two or more sets
+27.Difference_update()	        Removes the items in this set that are also included in another, specified set
+28discard()	                    Remove the specified item
+29.Intersection()	              Returns a set, that is the intersection of two other sets
+30.Intersection_update()        Removes the items in this set that are not present in other, specified set(s)
+31.Isdisjoint()	                Returns whether two sets have a intersection or not
+32.Issubset()	                  Returns whether another set contains this set or not
+33.Issuperset()	                Returns whether this set contains another set or not
+34.Pop()	                      Removes an element from the set
+35.Remove()	                    Removes the specified element
+36.Symmetric_difference()	      Returns a set with the symmetric differences of two sets
+37.Symmetric_difference_update()inserts the symmetric differences from this set and another
+38.Union()	                    Return a set containing the union of sets
+39.Update()	                    Update the set with the union of this set and others
 """
 # 1.Format
 # it is used to concat diffrent type of data
@@ -179,3 +197,100 @@ print(thistuple.count(5))
 #21.index
 thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
 print(thistuple.index(5))
+
+#Set Methods
+#22.add
+Names = {'Rio','Manika','Denver'}
+Names.add('nairobi')
+print(Names)
+
+#23.clear
+Names = {'Rio','Manika','Denver'}
+Names.clear()
+print(Names)
+
+#24.copy
+Names = {'Rio','Manika','Denver'}
+x = Names.copy()
+print(x)
+
+#25.difference
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.difference(Names)
+print(z)
+
+#26.difference_update
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+x.difference_update(Names)
+print(x)
+
+#27.discard
+Names = {'Rio','Manika','Denver'}
+Names.discard('Rio')
+print(Names)
+
+#28.intersection
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.intersection(Names)
+print(z)
+
+#29.intersection_update
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+x.intersection_update(Names)
+print(x)
+
+#30.isdisjoint
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.isdisjoint(Names)
+print(z)
+
+#31.issubset
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.issubset(Names)
+print(z)
+
+#32.issuperset
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.issuperset(Names)
+print(z)
+
+#33.pop
+Names = {'Rio','Manika','Denver'}
+Names.pop()
+print(Names)
+
+#33.remove
+Names = {'Rio','Manika','Denver'}
+Names.remove('Rio')
+print(Names)
+
+#34.symmetric_difference
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.symmetric_difference(Names)
+print(z)
+
+#35.symmetric_difference_update
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+Names.symmetric_difference_update(x)
+print(Names)
+
+#36.union
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+z= x.union(Names)
+print(z)
+
+#37.update
+Names = {'Rio','Manika','Denver'}
+x = {'Rio','Manika','Denver','nairobi'}
+Names.update(x)
+print(Names)
