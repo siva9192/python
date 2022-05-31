@@ -20,41 +20,49 @@ List Methods:
 13.Count
 14.Reverse
 15.Sort
-17.Remove   --removes specifed element
-18.Extand
-19.Index    --only returns the first occurrence of the value.
-20.Insert   --inserts the specified value at the specified position.
+16.Remove   --removes specifed element
+17.Extand
+18.Index    --only returns the first occurrence of the value.
+19.Insert   --inserts the specified value at the specified position.
 
 Tuple Methods
-21.Count
-22.Index
+20.Count
+21.Index
 
 Set Methods
-23.Add()	                      Adds an element to the set
-24.Clear()	                    Removes all the elements from the set
-25.Copy()	                      Returns a copy of the set
-26.Difference()	                Returns a set containing the difference between two or more sets
-27.Difference_update()	        Removes the items in this set that are also included in another, specified set
-28discard()	                    Remove the specified item
-29.Intersection()	              Returns a set, that is the intersection of two other sets
-30.Intersection_update()        Removes the items in this set that are not present in other, specified set(s)
-31.Isdisjoint()	                Returns whether two sets have a intersection or not
-32.Issubset()	                  Returns whether another set contains this set or not
-33.Issuperset()	                Returns whether this set contains another set or not
-34.Pop()	                      Removes an element from the set
-35.Remove()	                    Removes the specified element
-36.Symmetric_difference()	      Returns a set with the symmetric differences of two sets
-37.Symmetric_difference_update()inserts the symmetric differences from this set and another
-38.Union()	                    Return a set containing the union of sets
-39.Update()	                    Update the set with the union of this set and others
+22.Add()	                      Adds an element to the set
+23.Clear()	                    Removes all the elements from the set
+24.Copy()	                      Returns a copy of the set
+25.Difference()	                Returns a set containing the difference between two or more sets
+26.Difference_update()	        Removes the items in this set that are also included in another, specified set
+27.discard()	                    Remove the specified item
+28.Intersection()	              Returns a set, that is the intersection of two other sets
+29.Intersection_update()        Removes the items in this set that are not present in other, specified set(s)
+30.Isdisjoint()	                Returns whether two sets have a intersection or not
+31.Issubset()	                  Returns whether another set contains this set or not
+32.Issuperset()	                Returns whether this set contains another set or not
+33.Pop()	                      Removes an element from the set
+34.Remove()	                    Removes the specified element
+35.Symmetric_difference()	      Returns a set with the symmetric differences of two sets
+36.Symmetric_difference_update()inserts the symmetric differences from this set and another
+37.Union()	                    Return a set containing the union of sets
+38.Update()	                    Update the set with the union of this set and others
+
+Dictionary Methods
+39.clear()	                    Removes all the elements from the dictionary
+40.copy()	                      Returns a copy of the dictionary
+41.fromkeys()	                  Returns a dictionary with the specified keys and value
+42.get()	                      Returns the value of the specified key
+43.items()	                    Returns a list containing a tuple for each key value pair
+44.keys()	                      Returns a list containing the dictionary's keys
+45.pop()	                      Removes the element with the specified key
+46.popitem()	                  Removes the last inserted key-value pair
+47.setdefault()	                Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+48.update()	                    Updates the dictionary with the specified key-value pairs
+49.values()	                    Returns a list of all the values in the dictionary
 """
 # 1.Format
 # it is used to concat diffrent type of data
-from readline import insert_text
-from tkinter.font import names
-from unicodedata import name
-
-
 Name= 'Siva'
 Phone= 9866525117
 
@@ -266,31 +274,131 @@ Names = {'Rio','Manika','Denver'}
 Names.pop()
 print(Names)
 
-#33.remove
+#34.remove
 Names = {'Rio','Manika','Denver'}
 Names.remove('Rio')
 print(Names)
 
-#34.symmetric_difference
+#35.symmetric_difference
 Names = {'Rio','Manika','Denver'}
 x = {'Rio','Manika','Denver','nairobi'}
 z= x.symmetric_difference(Names)
 print(z)
 
-#35.symmetric_difference_update
+#36.symmetric_difference_update
 Names = {'Rio','Manika','Denver'}
 x = {'Rio','Manika','Denver','nairobi'}
 Names.symmetric_difference_update(x)
 print(Names)
 
-#36.union
+#37.union
 Names = {'Rio','Manika','Denver'}
 x = {'Rio','Manika','Denver','nairobi'}
 z= x.union(Names)
 print(z)
 
-#37.update
+#38.update
 Names = {'Rio','Manika','Denver'}
 x = {'Rio','Manika','Denver','nairobi'}
 Names.update(x)
 print(Names)
+
+##Dictionary Methods
+#39.clear()	  
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+Names.clear()
+print(Names)
+
+#40.copy()
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+x = Names.copy()
+print(x)
+	          
+#41.fromkeys()
+Names =("Rio","denver","Nairobi")
+x = 0
+Names = dict.fromkeys(Names,x)
+print(Names)
+#42.get()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.get("name"))
+           
+#43.items()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.items())
+         
+#44.keys()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.keys())
+          
+#45.pop()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.pop("Age"))
+           
+#46.popitem()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.popitem())
+       
+#47.setdefault()
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+x = Names.setdefault("name","Denver")
+print(x)
+	    
+#48.update()	
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+Names.update({"name":"Denver"})
+Names.update({"phone":9866})
+print(Names)
+#49.values()	        
+Names={
+  "name"  :"Rio",
+  "Age"   : 39,
+  "Gender":"Male"
+
+}
+print(Names.values())
